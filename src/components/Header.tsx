@@ -3,11 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { label: "Home", href: "#" },
-  { label: "About", href: "#about" },
-  { label: "Programs", href: "#programs" },
-  { label: "Admissions", href: "#admissions" },
-  { label: "Contact", href: "#contact" },
+  { label: "首页", href: "#" },
+  { label: "关于我们", href: "#about" },
+  { label: "课程项目", href: "#programs" },
+  { label: "招生信息", href: "#admissions" },
+  { label: "联系我们", href: "#contact" },
 ];
 
 const Header = () => {
@@ -19,12 +19,12 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-heading font-bold text-lg">UC</span>
+            <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center border-2 border-gold">
+              <span className="text-primary-foreground font-heading font-bold text-lg">UCB</span>
             </div>
             <div className="hidden sm:block">
-              <h1 className="font-heading font-semibold text-lg text-foreground">U.C. Berkshire</h1>
-              <p className="text-xs text-muted-foreground">School of Excellence</p>
+              <h1 className="font-heading font-semibold text-lg text-foreground">U.C. Berkshire School</h1>
+              <p className="text-xs text-muted-foreground">安大略省教育部授权国际私立中学</p>
             </div>
           </div>
 
@@ -44,10 +44,10 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
             <Button variant="outline" size="sm">
-              Student Portal
+              学生入口
             </Button>
             <Button variant="default" size="sm">
-              Apply Now
+              立即申请
             </Button>
           </div>
 
@@ -77,10 +77,10 @@ const Header = () => {
               ))}
               <div className="flex flex-col gap-2 mt-4 px-4">
                 <Button variant="outline" size="sm" className="w-full">
-                  Student Portal
+                  学生入口
                 </Button>
                 <Button variant="default" size="sm" className="w-full">
-                  Apply Now
+                  立即申请
                 </Button>
               </div>
             </nav>
