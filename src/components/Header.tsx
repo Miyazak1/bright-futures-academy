@@ -4,10 +4,12 @@ import { Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "Home", href: "#" },
-  { label: "About Us", href: "#about" },
+  { label: "About", href: "#about" },
   { label: "Programs", href: "#programs" },
+  { label: "Online Learning", href: "#online" },
+  { label: "Student Life", href: "#life" },
   { label: "Admissions", href: "#admissions" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const Header = () => {
@@ -41,13 +43,12 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
             <Button variant="outline" size="sm">
-              Student Portal
+              Log in
             </Button>
             <Button variant="default" size="sm">
-              Apply Now
+              Book Online
             </Button>
           </div>
 
@@ -77,10 +78,10 @@ const Header = () => {
               ))}
               <div className="flex flex-col gap-2 mt-4 px-4">
                 <Button variant="outline" size="sm" className="w-full">
-                  Student Portal
+                  Log in
                 </Button>
                 <Button variant="default" size="sm" className="w-full">
-                  Apply Now
+                  Book Online
                 </Button>
               </div>
             </nav>
