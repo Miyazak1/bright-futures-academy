@@ -3,11 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { label: "首页", href: "#" },
-  { label: "关于我们", href: "#about" },
-  { label: "课程项目", href: "#programs" },
-  { label: "招生信息", href: "#admissions" },
-  { label: "联系我们", href: "#contact" },
+  { label: "Home", href: "#" },
+  { label: "About Us", href: "#about" },
+  { label: "Programs", href: "#programs" },
+  { label: "Admissions", href: "#admissions" },
+  { label: "Contact Us", href: "#contact" },
 ];
 
 const Header = () => {
@@ -23,8 +23,8 @@ const Header = () => {
               <span className="text-primary-foreground font-heading font-bold text-lg">UCB</span>
             </div>
             <div className="hidden sm:block">
-              <h1 className="font-heading font-semibold text-lg text-foreground">U.C. Berkshire School</h1>
-              <p className="text-xs text-muted-foreground">安大略省教育部授权国际私立中学</p>
+            <h1 className="font-heading font-semibold text-lg text-foreground">U.C. Berkshire School</h1>
+              <p className="text-xs text-muted-foreground">Ontario Ministry of Education Authorized</p>
             </div>
           </div>
 
@@ -44,10 +44,10 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
             <Button variant="outline" size="sm">
-              学生入口
+              Student Portal
             </Button>
             <Button variant="default" size="sm">
-              立即申请
+              Apply Now
             </Button>
           </div>
 
@@ -77,10 +77,10 @@ const Header = () => {
               ))}
               <div className="flex flex-col gap-2 mt-4 px-4">
                 <Button variant="outline" size="sm" className="w-full">
-                  学生入口
+                  Student Portal
                 </Button>
                 <Button variant="default" size="sm" className="w-full">
-                  立即申请
+                  Apply Now
                 </Button>
               </div>
             </nav>
