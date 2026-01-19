@@ -20,29 +20,29 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-gold/20 backdrop-blur-sm border border-gold/30 rounded-full px-4 py-2 mb-8 animate-fade-up">
             <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-            <span className="text-sm font-medium text-primary-foreground">安大略省教育部授权学校</span>
+            <span className="text-sm font-medium text-primary-foreground">Ontario Ministry of Education Authorized</span>
           </div>
 
           {/* Heading */}
           <h1 className="heading-display text-primary-foreground mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
-            学无止境
+            Learn Better
             <br />
-            <span className="text-gold">追求卓越</span>
+            <span className="text-gold">Than Best</span>
           </h1>
 
           {/* Description */}
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-10 max-w-2xl leading-relaxed animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            U.C. Berkshire School 是一所经安大略省教育部授权的国际私立中学，
-            采用新型寄宿与走读相结合的模式，具有颁发安大略省中学学分和毕业证书的资格。
+            U.C. Berkshire School is an international private secondary school, authorized by the Ontario Ministry of Education. 
+            Our school is a new-style boarding and commuting school, with the qualification to grant Ontario secondary school credits and diplomas in Canada.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: "0.3s" }}>
             <Button variant="gold" size="xl">
-              开始申请
+              More Details
             </Button>
             <Button variant="heroOutline" size="xl">
-              了解课程
+              Our Programs
             </Button>
           </div>
         </div>
