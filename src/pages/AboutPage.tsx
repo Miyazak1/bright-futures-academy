@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Users } from "lucide-react";
 import studentsImage from "@/assets/students-studying.jpg";
 
@@ -156,9 +157,11 @@ const AboutPage = () => {
 
             {/* CTA */}
             <div className="text-center mt-16 animate-fade-up">
-              <Button variant="hero" size="lg">
-                Contact Us
-              </Button>
+              <Link to="/contact">
+                <Button variant="hero" size="lg">
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
