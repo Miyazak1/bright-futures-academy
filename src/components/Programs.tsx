@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { BookOpen, Languages, School, Monitor, ArrowRight } from "lucide-react";
 
 const programs = [
@@ -7,24 +8,28 @@ const programs = [
     title: "OSSD",
     description: "Ontario Secondary School Diploma - A globally recognized diploma granted to secondary school graduates in Ontario.",
     color: "bg-primary",
+    href: "/programs",
   },
   {
     icon: Languages,
     title: "Language Courses",
     description: "English as a Second Language (ESL), IELTS, and TOEFL preparation courses for international students.",
     color: "bg-gold",
+    href: "/programs",
   },
   {
     icon: School,
     title: "Grade 9-12",
     description: "We offer comprehensive high school courses from grade 9 to 12 for students with university goals.",
     color: "bg-forest-light",
+    href: "/programs",
   },
   {
     icon: Monitor,
     title: "eLearning",
     description: "Remote study opportunities for international students, enabling them to study from anywhere in the world.",
     color: "bg-primary",
+    href: "/online-learning",
   },
 ];
 
@@ -62,22 +67,24 @@ const Programs = () => {
               <p className="text-muted-foreground text-sm leading-relaxed mb-6">
                 {program.description}
               </p>
-              <a
-                href="#"
+              <Link
+                to={program.href}
                 className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-forest-light transition-colors group-hover:gap-3"
               >
                 Learn more
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
             </div>
           ))}
         </div>
 
         {/* CTA */}
         <div className="text-center mt-12 animate-fade-up" style={{ animationDelay: "0.4s" }}>
-          <Button variant="hero" size="lg">
-            View All Programs
-          </Button>
+          <Link to="/programs">
+            <Button variant="hero" size="lg">
+              View All Programs
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

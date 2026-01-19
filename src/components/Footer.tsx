@@ -1,7 +1,31 @@
 import { Facebook, Twitter, Instagram, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
+
+const quickLinks = [
+  { label: "About Us", href: "/about" },
+  { label: "Programs", href: "/programs" },
+  { label: "Admissions", href: "/admissions" },
+  { label: "Student Life", href: "/student-life" },
+  { label: "Contact", href: "/contact" },
+];
+
+const programLinks = [
+  { label: "OSSD Diploma", href: "/programs" },
+  { label: "Grade 9-12", href: "/programs" },
+  { label: "ESL Courses", href: "/programs" },
+  { label: "IELTS Prep", href: "/programs" },
+  { label: "eLearning", href: "/online-learning" },
+];
+
+const socialLinks = [
+  { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
+  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+  { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+];
 
 const Footer = () => {
   return (
@@ -10,25 +34,28 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-6">
+            <Link to="/" className="flex items-center gap-3 mb-6">
               <img src={logo} alt="U.C. Berkshire School" className="w-12 h-12" />
               <div>
                 <h3 className="font-heading font-semibold text-lg">U.C. Berkshire</h3>
                 <p className="text-xs text-primary-foreground/70">School of Excellence</p>
               </div>
-            </div>
+            </Link>
             <p className="text-sm text-primary-foreground/80 leading-relaxed mb-6">
               An international private secondary school authorized by the Ontario Ministry of Education, 
               dedicated to student success.
             </p>
             <div className="flex gap-3">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
+              {socialLinks.map((social) => (
                 <a
-                  key={index}
-                  href="#"
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
                   className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-gold transition-colors duration-300"
                 >
-                  <Icon className="w-5 h-5" />
+                  <social.icon className="w-5 h-5" />
                 </a>
               ))}
             </div>
@@ -38,14 +65,14 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-lg mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {["About Us", "Programs", "Admissions", "Student Life", "News & Events"].map((link) => (
-                <li key={link}>
-                  <a
-                    href="#"
+              {quickLinks.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    to={link.href}
                     className="text-sm text-primary-foreground/80 hover:text-gold transition-colors duration-200"
                   >
-                    {link}
-                  </a>
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -55,14 +82,14 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-lg mb-6">Programs</h4>
             <ul className="space-y-3">
-              {["OSSD Diploma", "Grade 9-12", "ESL Courses", "IELTS Prep", "eLearning"].map((link) => (
-                <li key={link}>
-                  <a
-                    href="#"
+              {programLinks.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    to={link.href}
                     className="text-sm text-primary-foreground/80 hover:text-gold transition-colors duration-200"
                   >
-                    {link}
-                  </a>
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -93,15 +120,24 @@ const Footer = () => {
             © 2024 U.C. Berkshire School. All rights reserved.
           </p>
           <div className="flex gap-6">
-            {["Privacy Policy", "Terms of Service", "Cookie Policy"].map((link) => (
-              <a
-                key={link}
-                href="#"
-                className="text-sm text-primary-foreground/70 hover:text-gold transition-colors duration-200"
-              >
-                {link}
-              </a>
-            ))}
+            <Link
+              to="/contact"
+              className="text-sm text-primary-foreground/70 hover:text-gold transition-colors duration-200"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              to="/contact"
+              className="text-sm text-primary-foreground/70 hover:text-gold transition-colors duration-200"
+            >
+              Terms of Service
+            </Link>
+            <Link
+              to="/contact"
+              className="text-sm text-primary-foreground/70 hover:text-gold transition-colors duration-200"
+            >
+              Cookie Policy
+            </Link>
           </div>
         </div>
       </div>

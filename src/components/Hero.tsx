@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-students.jpg";
 
 const Hero = () => {
@@ -38,12 +39,16 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            <Button variant="gold" size="xl">
-              More Details
-            </Button>
-            <Button variant="heroOutline" size="xl">
-              Our Programs
-            </Button>
+            <Link to="/about">
+              <Button variant="gold" size="xl">
+                More Details
+              </Button>
+            </Link>
+            <Link to="/programs">
+              <Button variant="heroOutline" size="xl">
+                Our Programs
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
