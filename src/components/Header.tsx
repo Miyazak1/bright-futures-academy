@@ -59,9 +59,11 @@ const Header = () => {
             <Button variant="outline" size="sm">
               Log in
             </Button>
-            <Button variant="default" size="sm">
-              Book Online
-            </Button>
+            <Link to="/book-online">
+              <Button variant="default" size="sm">
+                Book Online
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -96,9 +98,11 @@ const Header = () => {
                 <Button variant="outline" size="sm" className="w-full">
                   Log in
                 </Button>
-                <Button variant="default" size="sm" className="w-full">
-                  Book Online
-                </Button>
+                <Link to="/book-online">
+                  <Button variant="default" size="sm" className="w-full">
+                    Book Online
+                  </Button>
+                </Link>
               </div>
             </nav>
           </div>
