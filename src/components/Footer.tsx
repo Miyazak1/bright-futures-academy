@@ -1,6 +1,7 @@
 import { Facebook, Twitter, Instagram, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -10,9 +11,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-primary-foreground/20 flex items-center justify-center">
-                <span className="text-primary-foreground font-heading font-bold text-lg">UC</span>
-              </div>
+              <img src={logo} alt="U.C. Berkshire School" className="w-12 h-12" />
               <div>
                 <h3 className="font-heading font-semibold text-lg">U.C. Berkshire</h3>
                 <p className="text-xs text-primary-foreground/70">School of Excellence</p>
