@@ -75,17 +75,38 @@ const Contact = () => {
               Get in Touch
             </h3>
             <div className="space-y-6">
-              {contactInfo.map((item) => (
-                <div key={item.label} className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <item.icon className="w-5 h-5 text-primary" />
+              {contactInfo.map((item) => {
+                const getHref = () => {
+                  if (item.label === "Email") return `mailto:${item.value}`;
+                  if (item.label === "Phone") return `tel:${item.value.replace(/\s/g, "")}`;
+                  if (item.label === "Address") return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.value)}`;
+                  return undefined;
+                };
+                const href = getHref();
+                
+                return (
+                  <div key={item.label} className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                      <item.icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground mb-1">{item.label}</p>
+                      {href ? (
+                        <a 
+                          href={href}
+                          target={item.label === "Address" ? "_blank" : undefined}
+                          rel={item.label === "Address" ? "noopener noreferrer" : undefined}
+                          className="text-foreground font-medium hover:text-primary transition-colors"
+                        >
+                          {item.value}
+                        </a>
+                      ) : (
+                        <p className="text-foreground font-medium">{item.value}</p>
+                      )}
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground mb-1">{item.label}</p>
-                    <p className="text-foreground font-medium">{item.value}</p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             {/* Map Placeholder */}
