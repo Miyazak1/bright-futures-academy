@@ -74,8 +74,8 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground mb-1">Email</p>
-                      <a href="mailto:contact@ucbschool.ca" className="text-foreground font-medium hover:text-gold transition-colors">
-                        contact@ucbschool.ca
+                      <a href="mailto:info@ucbschool.com" className="text-foreground font-medium hover:text-gold transition-colors">
+                        info@ucbschool.com
                       </a>
                     </div>
                   </div>

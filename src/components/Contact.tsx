@@ -14,7 +14,7 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "contact@ucbschool.ca",
+    value: "info@ucbschool.com",
   },
   {
     icon: Phone,
